@@ -12,6 +12,6 @@ To Reproduce:
 
 - Run test coverage: `yarn test:cov` and view the output (`coverage/lcov-report/index.html`) (notice how coverage of `components/Layout/ViewEvents/Columns` is at 16.67%)
 
-- Change the order of the columns by going moving the [eventDate column](src/components/Layout/ViewEvents/Columns/index.tsx#L37-L48) to the first index within the columns array.
+- Change the order of the columns by moving the [eventDate column](src/components/Layout/ViewEvents/Columns/index.tsx#L37-L48) to the first index within the columns array.
 
 - Re-run test coverage: `yarn test:cov` and view the output (`coverage/lcov-report/index.html`) (coverage changes from 16.67% to 33.33%)
