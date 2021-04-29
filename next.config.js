@@ -1,10 +1,9 @@
 const ContextReplacementPlugin = require("webpack").ContextReplacementPlugin;
 const open = require("opener");
 
-const { analyze, CLIENT, INDEVELOPMENT } = process.env;
-
 /* opens a browser window */
-if (INDEVELOPMENT) setTimeout(() => open(CLIENT), 1000);
+if (process.env.NODE_ENV === "development")
+  setTimeout(() => open("http://localhost:3000"), 1000);
 
 module.exports = {
   webpack(config) {
