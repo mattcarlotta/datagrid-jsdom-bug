@@ -13,6 +13,18 @@ import {
 
 const Columns: GridColumns = [
   { field: "_id", headerName: "Database Id", flex: 1.5 },
+  {
+    field: "eventDate",
+    headerName: "Date",
+    flex: 2.33,
+    renderCell: (params: GridValueGetterParams): ReactElement => (
+      <FormatDate
+        format={shortDateTimeFormat}
+        date={params.getValue("eventDate") as Date}
+        style={{ width: "100%" }}
+      />
+    )
+  },
   { field: "seasonId", headerName: "Season", width: 110 },
   {
     field: "team",
@@ -33,18 +45,6 @@ const Columns: GridColumns = [
     field: "uniform",
     headerName: "Uniform",
     flex: 2
-  },
-  {
-    field: "eventDate",
-    headerName: "Date",
-    flex: 2.33,
-    renderCell: (params: GridValueGetterParams): ReactElement => (
-      <FormatDate
-        format={shortDateTimeFormat}
-        date={params.getValue("eventDate") as Date}
-        style={{ width: "100%" }}
-      />
-    )
   },
   {
     field: "callTimes",
