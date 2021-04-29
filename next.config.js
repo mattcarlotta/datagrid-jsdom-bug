@@ -9,9 +9,7 @@ module.exports = {
   webpack(config) {
     /* adds custom plugins to client and server */
     config.plugins.push(
-      ...[new ContextReplacementPlugin(/moment[\/\\]locale/, /\b\B/)].filter(
-        Boolean
-      )
+      new ContextReplacementPlugin(/moment[\/\\]locale/, /\b\B/)
     );
 
     /* return new config to next */

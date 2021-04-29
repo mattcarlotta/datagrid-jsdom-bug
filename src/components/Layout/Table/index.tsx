@@ -168,7 +168,7 @@ const Table = ({
     <Padding
       data-testid="data-table-container"
       left="20px"
-      top="0px"
+      top="20px"
       right="20px"
       bottom="40px"
     >

@@ -11,16 +11,18 @@ const Container = ({ Component, pageProps }: AppProps): ReactElement => {
   }, []);
 
   return (
-    <Padding top="20px" right="20px" bottom="20px" left="20px">
-      <Head>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-      </Head>
-      <Component {...pageProps} />
+    <>
       <GlobalStylesheet />
-    </Padding>
+      <Padding top="20px" right="20px" bottom="20px" left="20px">
+        <Head>
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+          />
+        </Head>
+        <Component {...pageProps} />
+      </Padding>
+    </>
   );
 };
 
