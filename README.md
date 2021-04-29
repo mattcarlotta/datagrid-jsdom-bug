@@ -1,25 +1,17 @@
-## SJ Ice Team App [![Codecov](https://img.shields.io/codecov/c/github/mattcarlotta/SJSITApp-SSR)](https://codecov.io/gh/mattcarlotta/SJSITApp-SSR/branch/master) ![Deployment](https://github.com/mattcarlotta/SJSITApp-SSR/workflows/Deployment/badge.svg)
+### DataGrid JSDOM Bug
 
-An application to manage the Sharks Ice Team scheduling.
+When rendering DataGrid columns within a JSDOM environment, only the first two columns are rendered.
 
-<a target="_blank" rel="noopener noreferrer" href="https://sjsiceteam.com/" alt="sharksWelcome.png">
-<img src="https://i.imgur.com/7isN4eO.png" />
-</a>
+To Reproduce:
 
-<br />
-<br />
+Clone Repo: `git clone git@github.com:mattcarlotta/datagrid-jsdom-bug.git`
 
-<a target="_blank" rel="noopener noreferrer" href="https://trello.com/b/39l0txdu/sjs-ice-team-app">
-  <img src="https://i.imgur.com/APUzNtR.png" alt="trello.png" height="20px"></img>
-</a>
+Install deps: `yarn`
 
-<br />
-<br />
+Run tests: `yarn test` and view log output (only the `_id` and `seasonId` columns are rendered)
 
-Current browser support:
-<br />
-<img style="margin-right: 5px;" src="https://i.sjsiceteam.com/images/misc/chrome.png" alt="chrome.png" />
-<img style="margin-right: 5px;" src="https://i.sjsiceteam.com/images/misc/firefox.png" alt="firefox.png" />
-<img style="margin-right: 5px;" src="https://i.sjsiceteam.com/images/misc/safari.png" alt="safari.png" />
-<img style="margin-right: 5px;" src="https://i.sjsiceteam.com/images/misc/samsung.png" alt="samsung.png" />
-<img style="margin-right: 5px;" src="https://i.sjsiceteam.com/images/misc/ie11.png" alt="ie11.png" />
+Run test coverage: `yarn test:cov` and view the output (`coverage/lcov-report/index.html`) (notice how coverage of `components/Layout/ViewEvents/Columns` is at 16.67%)
+
+Change the order of the columns by going to [Columns](src/components/Layout/ViewEvents/Columns/index.tsx) and move the [eventDate column](src/components/Layout/ViewEvents/Columns/index.tsx#L37-L48) to the second index within the columns array.
+
+Re-run test coverage: `yarn test:cov` and view the output (`coverage/lcov-report/index.html`) (coverage changes from 16.67% to 33.33%)
