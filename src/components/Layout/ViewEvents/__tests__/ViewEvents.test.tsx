@@ -34,6 +34,6 @@ describe("View Events", () => {
       expect(wrapper.find("[data-testid='data-table']")).toExist();
     });
 
-    console.log(wrapper.debug());
+    console.log(wrapper.find("GridCell").debug());
   });
 });
