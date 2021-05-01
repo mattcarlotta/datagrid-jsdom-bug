@@ -8,7 +8,7 @@ To reproduce:
 
 - Install deps: `yarn`
 
-- Run test suites: `yarn test` and view log output -- only the `__checkbox__`, `_id` and `seasonId` columns are rendered:
+- Run test suites: `yarn test` and view log output -- only the `__check__`, `_id` and `seasonId` columns are rendered:
 
 <details>
 <summary>Click to expand jsdom output</summary>
@@ -77,7 +77,7 @@ To reproduce:
 
 - Change the order of the columns by moving the [eventDate column](src/components/Layout/ViewEvents/Columns/index.tsx#L37-L48) to the second index within the columns array.
 
-- Rerun test suites: `yarn test` and view log output -- only the `__checkbox__`, `_id` and `eventDate` columns are rendered:
+- Rerun test suites: `yarn test` and view log output -- only the `__check__`, `_id` and `eventDate` columns are rendered:
 
 <details>
 <summary>Click to expand jsdom output</summary>
