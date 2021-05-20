@@ -906,9 +906,10 @@
     react-is "^16.8.0 || ^17.0.0"
     react-transition-group "^4.4.0"
 
-"@material-ui/data-grid@https://pkg.csb.dev/mui-org/material-ui-x/commit/0c03787f/@material-ui/data-grid":
-  version "4.0.0-alpha.26"
-  resolved "https://pkg.csb.dev/mui-org/material-ui-x/commit/0c03787f/@material-ui/data-grid#cf24b268cbdb0543323eaca641349c50c5d022f9"
+"@material-ui/data-grid@4.0.0-alpha.28":
+  version "4.0.0-alpha.28"
+  resolved "https://registry.yarnpkg.com/@material-ui/data-grid/-/data-grid-4.0.0-alpha.28.tgz#a82f0e382c8abffa7e7d50d31a4706f8c30215e9"
+  integrity sha512-a6xZj0pMIX2uGsyMMZP/kZISo7MKS43+hHApoHeije82yMAPKhTXV7/SCuAFoF9qye14XeSclwmwOkN2AJRAPg==
   dependencies:
     "@material-ui/utils" "^5.0.0-alpha.14"
     prop-types "^15.7.2"
