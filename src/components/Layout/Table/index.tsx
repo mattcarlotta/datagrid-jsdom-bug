@@ -56,49 +56,26 @@ const Table = ({
       const data: TTableData = await new Promise(resolve =>
         setTimeout(() => {
           resolve({
-            docs: [
-              {
-                callTimes: [
-                  "2021-04-22T18:30:25-07:00",
-                  "2021-04-22T18:45:42-07:00",
-                  "2021-04-22T19:00:47-07:00"
-                ],
-                employeeResponses: [],
-                eventDate: "2021-07-02T02:30:00.000Z",
-                eventType: "Game",
-                id: "608253a62f8e84ec172aa0b4",
-                location: "SAP Center at San Jose",
-                notes: "",
-                opponent: "Calgary Flames",
-                scheduledIds: [],
-                seasonId: "20212022",
-                sentEmailReminders: false,
-                team: "San Jose Sharks",
-                uniform: "Sharks Teal Jersey",
-                _id: "608253a62f8e84ec172aa0b4"
-              },
-              {
-                callTimes: [
-                  "2021-04-20T18:30:04-07:00",
-                  "2021-04-20T18:45:50-07:00",
-                  "2021-04-20T19:00:56-07:00"
-                ],
-                employeeResponses: [],
-                eventDate: "2021-07-01T02:30:00.000Z",
-                eventType: "Game",
-                id: "607f8d3b14aaba53ca79061e",
-                location: "SAP Center at San Jose",
-                notes: "",
-                opponent: "Carolina Hurricanes",
-                scheduledIds: [],
-                seasonId: "20212022",
-                sentEmailReminders: false,
-                team: "San Jose Sharks",
-                uniform: "Sharks Black Jersey",
-                _id: "607f8d3b14aaba53ca79061e"
-              }
-            ],
-            totalDocs: 2
+            docs: Array.from({ length: 11 }, () => ({
+              callTimes: [
+                "2021-04-22T18:30:25-07:00",
+                "2021-04-22T18:45:42-07:00",
+                "2021-04-22T19:00:47-07:00"
+              ],
+              employeeResponses: [],
+              eventDate: "2021-07-02T02:30:00.000Z",
+              eventType: "Game",
+              location: "SAP Center at San Jose",
+              notes: "",
+              opponent: "Calgary Flames",
+              scheduledIds: [],
+              seasonId: "20212022",
+              sentEmailReminders: false,
+              team: "San Jose Sharks",
+              uniform: "Sharks Teal Jersey",
+              _id: Math.random()
+            })),
+            totalDocs: 11
           });
         }, 1000)
       );
