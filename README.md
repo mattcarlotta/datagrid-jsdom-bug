@@ -4,7 +4,7 @@ Prior to v4.0.0-alpha.29 the `page` parameter from the `onPageChange` function w
 
 To reproduce:
 
-- Clone repo: `git clone --single-branch --branch pagination git@github.com:mattcarlotta/datagrid-jsdom-bug.git`
+- Clone repo: `git clone --single-branch --branch alpha28 git@github.com:mattcarlotta/datagrid-jsdom-bug.git`
 
 - Install deps: `yarn`
 
